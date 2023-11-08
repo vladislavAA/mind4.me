@@ -1,0 +1,260 @@
+@import "_normalize";
+@import "_reset";
+@import "_vars";
+
+@font-face {
+    font-family: "Suisse Intl"; 
+    src: url("../fonts/Suisse-Intl-Book.ttf") format("truetype"); 
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+.form-auth {
+    width: 630px;
+    height: 646px;
+    z-index: 2;
+    background-color: $background-color-form;
+    border-radius: 30px;
+    backdrop-filter: blur(55px);
+
+    &__content {
+        padding-top: 50px;
+        padding-left: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 510px;
+        height: 52px;
+        margin: 0;
+        margin-bottom: 28px;
+        font-family: "Suisse Intl";
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 52px;
+        letter-spacing: 0.2px;
+        color: $color-text;
+    }
+
+    &__label-e-mail {
+        display: block;
+        font-family: "Suisse Intl";
+        font-weight: 450;
+        font-size: 16px;
+        color: $color-text;
+        margin-bottom: 7px;
+    }
+
+    &__input-e-mail {
+        display: block;
+        width: 510px;
+        height: 64px;
+        background-color: $input-placeholder-color;
+        border-radius: 12px;
+        font-family: "Suisse Intl";
+        font-weight: 400;
+        font-size: 18px;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-top: 6px;
+        margin-bottom: 18px;
+    }
+
+    &__label-password {
+        display: block;
+        font-family: "Suisse Intl";
+        font-weight: 450;
+        line-height: 24px;
+        font-size: 16px;
+        color: $color-text;
+        margin-bottom: 6px;
+    }
+
+    &__input-password {
+        display: block;
+        width: 510px;
+        height: 64px;
+        background-color: $input-placeholder-color;
+        border-radius: 12px;
+        font-family: "Suisse Intl";
+        font-weight: 400;
+        font-size: 18px;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-top: 6px;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        width: 510px;
+        height: 60px;
+        background-color: $background-color-btn;
+        border-radius: 10px;
+        font-family: "Suisse Intl";
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-text-btn;
+        box-sizing: border-box;
+        padding-top: 5px;
+        letter-spacing: 0.5px;
+        line-height: 21px;
+    }
+
+    &__or {
+        width: 510px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 13px;
+    }
+
+    &__line {
+        width: 211px;
+        margin-top: 25px;
+        border: none;
+        border-top: 1px solid $line-color;
+    }
+    
+    &__text-or {
+        font-family: "Suisse Intl";
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text;
+        margin-top: 15px;
+        padding-top: 2px;
+        letter-spacing: 0.5px;
+        line-height: 21px;
+    }
+
+    &__button-sign-up {
+        width: 510px;
+        height: 60px;
+        border: 1px solid $border-btn-sign-up-color;
+        border-radius: 10px;
+        font-family: "Suisse Intl";
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text;
+        letter-spacing: 0.5px;
+        line-height: 21px;
+        box-sizing: border-box;
+        padding-top: 5px
+    }
+
+    &__restore-link {
+        font-family: "Suisse Intl";
+        font-size: 16px;
+        font-weight: 450;
+        color: $color-text;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 631px) {
+    .container {
+        max-width: 631px;
+    }
+
+    .form-auth {
+        width: 500px;
+
+        &__input-e-mail {
+            width: 380px;
+        }
+
+        &__input-password {
+            width: 380px;
+        }
+
+        &__button {
+            width: 380px;
+        }
+
+        &__or {
+            width: 380px;
+        }
+
+        &__line {
+            width: 150px;
+        }
+
+        &__button-sign-up {
+            width: 380px;
+        }
+    }
+}
+
+@media(max-width: 501px) {
+    .container {
+        max-width: 501px;
+    }
+
+    .form-auth {
+        width: 300px;
+        height: 500px;
+
+        &__content {
+            padding-left: 10px;
+        }
+
+        &__title {
+            font-size: 31px;
+            margin-left: 50px;
+        }
+
+        &__input-e-mail {
+            width: 280px;
+            height: 35px;
+            font-size: 15px;
+            padding-top: 0px;
+        }
+
+        &__input-password {
+            width: 280px;
+            height: 35px;
+            font-size: 15px;
+            padding-top: 0px;
+        }
+
+        &__button {
+            width: 280px;
+            height: 35px;
+        }
+
+        &__or {
+            width: 280px;
+        }
+
+        &__line {
+            width: 110px;
+        }
+
+        &__button-sign-up {
+            width: 280px;
+            height: 35px;
+        }
+
+        &__restore-link {
+            font-size: 13px;
+        }
+    }
+}

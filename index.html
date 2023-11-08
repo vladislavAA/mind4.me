@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Mind4.me</title>
+</head>
+<body>
+    <div class="container">
+        <video src="./video/first-screen.mp4" type="video/mp4" autoplay muted loop></video>
+        <section class="form-auth">
+            <div class="form-auth__content">
+                <p class="form-auth__title">Please login</p>
+                <form class="form-auth__style" action="#" method="post">
+                    <label class="form-auth__label-e-mail">E-mail</label>
+                    <input type="email" class="form-auth__input-e-mail" name="auth-email" placeholder="Enter E-mail" required>
+                    <label class="form-auth__label-password">Password</label>
+                    <input type="password" class="form-auth__input-password" name="auth-password" placeholder="Enter Password" required>
+                    <button class="form-auth__button" type="submit" name="auth-submit">LOGIN</button>
+                </form>
+                <div class="form-auth__or">
+                    <hr class="form-auth__line">
+                    <span class="form-auth__text-or">OR</span>
+                    <hr class="form-auth__line">
+                </div>
+                <button class="form-auth__button-sign-up" type="submit" name="sign-up-submit">SIGN UP</button>
+                <a class="form-auth__restore-link" href="#">Forget password? Restore</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
